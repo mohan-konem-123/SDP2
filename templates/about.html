@@ -1,0 +1,150 @@
+{%extends 'index.html'%}
+{% block title %}
+About Us
+{%endblock%}
+{% block content%}
+{% load static %}
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>ABOUT US</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    <li class="breadcrumb-item active">ABOUT US</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+<!-- Start About Page  -->
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="banner-frame"><img class="img-fluid" src="{% static 'images/about-img.jpg' %}" alt=""/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title-top">We are <span>People Market</span></h2>
+<!--                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,-->
+<!--                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae-->
+<!--                    dicta sunt explicabo. Nemo enim ipsam-->
+<!--                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos-->
+<!--                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit-->
+<!--                    amet, consectetur, adipisci velit,-->
+<!--                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat-->
+<!--                    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit-->
+<!--                    laboriosam, nisi ut aliquid ex ea commodi consequatur?-->
+<!--                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae-->
+<!--                    consequatur.</p>-->
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore-->
+<!--                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+<!--                    aliquip ex ea commodo consequat.</p>-->
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3>We are Trusted</h3>
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+<!--                        labore et dolore magna aliqua. </p>-->
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3>We are Professional</h3>
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+<!--                        labore et dolore magna aliqua. </p>-->
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3>We are Expert</h3>
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+<!--                        labore et dolore magna aliqua. </p>-->
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-12">
+                <h2 class="noo-sh-title">Meet Our Team</h2>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="hover-team">
+                    <div class="our-team"><img src="{% static 'images/me.jpg' %}" alt=""  style="width:500px;height:300px;"/>
+                        <div class="team-content">
+                            <h3 class="title">Mohan Srinivas</h3> <span class="post">Web Developer</span></div>
+                        <ul class="social">
+                            <li>
+                                <a href="https://www.facebook.com/mohan.konem/" class="fab fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/mohan-srinivas-11374a193/" class="fab fa-linkedin"></a>
+                            </li>
+                            <li>
+                                <a href="mohan.konem@gmail.com" class="fab fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/mohan_konem/" class="fab fa-instagram"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="my-0">
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="hover-team">
+                    <div class="our-team"><img src="{% static 'images/RK.jpg' %}" alt="" style="width:500px;height:300px;"/>
+                        <div class="team-content">
+                            <h3 class="title">Rama Krishna</h3> <span class="post">Web Developer</span></div>
+                        <ul class="social">
+                            <li>
+                                <a href="https://www.facebook.com/ramakrishna.palnati.1" class="fab fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="www.linkedin.com/in/rama-krishna-palnati-839981207" class="fab fa-linkedin"></a>
+                            </li>
+                            <li>
+                                <a href="ramakrishnapalnati531@gmail.com" class="fab fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/ramakrishnapalnati/" class="fab fa-instagram"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="my-0">
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="hover-team">
+                    <div class="our-team"><img src="{% static 'images/midhun.jpg' %}" alt="" style="width:500px;height:300px;"/>
+                        <div class="team-content">
+                            <h3 class="title">Midhun Kumar</h3> <span class="post">Web Developer</span></div>
+                        <ul class="social">
+                            <li>
+                                <a href="https://www.facebook.com/midhun.reddy.161/" class="fab fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/midhun-kumar-goda-25103b1a2/" class="fab fa-linkedin"></a>
+                            </li>
+                            <li>
+                                <a href="midhunreddy2001@gmail.com" class="fab fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/_.midhun_reddy._/" class="fab fa-instagram"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="my-0">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About Page -->
+{% endblock %}
+
