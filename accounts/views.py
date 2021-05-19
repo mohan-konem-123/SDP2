@@ -37,7 +37,7 @@ def register(request):
                 print("user {} created!".format(username))
                 return redirect('login')
         else:
-            messages.info(request, 'passwod not matched..')
+            messages.info(request, 'passwords not matched..')
             return redirect('register')
         return redirect('/')
     else:
@@ -48,7 +48,6 @@ def login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-
         user = authenticate(username=username, password=password)
         print(user)
         if user is not None:
