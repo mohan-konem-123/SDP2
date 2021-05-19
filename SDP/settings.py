@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'MyApp'
+    'MyApp',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,9 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER ='mohan.konem@gmail.com' #sender's email-id
+EMAIL_HOST_PASSWORD ='kthzwyfsdnsnkgmk' #password associated with above email-id

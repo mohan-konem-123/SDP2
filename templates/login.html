@@ -2,11 +2,11 @@
 <html>
 <head>
     {% load static %}
-	<title>Login Form</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
 	*{
@@ -231,43 +231,57 @@ a:hover{
 		justify-content: center;
 	}
 }
+
 </style>
 <body>
-	<img class="wave"src="{% static 'images/wave.png' %}">
-	<div class="container">
-		<div class="img">
-			<img src="{% static 'images/login.jpg' %}">
-		</div>
-		<div class="login-content">
-          
-			<form method="POST" >
-				  {% csrf_token %}
-				<h2 class="title">Sing Up</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" name="username" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" name="password" class="input">
-            	   </div>
-            	</div>
-            	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
-				<nav><a  href="/reg">Register</a></nav>
-            </form>
-        </div>
+<div class="container">
+    <div class="img">
+        <img src="{% static 'images/login.jpg' %}">
     </div>
-    <script>
+    <div class="login-content">
+
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="title">Login</h2>
+            <div>
+                {% for message in messages %}
+                <h3 style="color:red; font-family: Arial, Helvetica, sans-serif;">
+                    {{message}}
+                </h3>
+                {% endfor %}
+            </div>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="div">
+                    <h5>Username</h5>
+                    <input type="text" name="username" class="input">
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+                    <h5>Password</h5>
+                    <input type="password" name="password" class="input">
+                </div>
+            </div>
+            <div>
+                {% for message in messages %}
+                <h3 style="color:red; font-family: Arial, Helvetica, sans-serif;">
+                    {{message}}
+                </h3>
+                {% endfor %}
+            </div>
+            <a href="#">Forgot Password?</a>
+            <input type="submit" class="btn" value="Login">
+            <nav><a href="{% url 'register' %}">Register</a></nav>
+        </form>
+    </div>
+</div>
+<script>
 		const inputs = document.querySelectorAll(".input");
 		function addcl(){
 			let parent = this.parentNode.parentNode;
@@ -287,6 +301,7 @@ inputs.forEach(input => {
 	input.addEventListener("blur", remcl);
 });
 
-	</script>
+
+</script>
 </body>
 </html>
