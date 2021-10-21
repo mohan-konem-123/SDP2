@@ -75,13 +75,23 @@ WSGI_APPLICATION = 'SDP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'SDP',
+#         'USER': 'postgres',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost'
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'SDP',
-        'USER': 'postgres',
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'SDP2',
+        'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'localhost'
+        'HOST': '127.0.0.1',
+        'PORT':'3306',   # Or an IP Address that your DB is hosted on'PORT': '3306',
     }
 }
 
