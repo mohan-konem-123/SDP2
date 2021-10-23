@@ -139,6 +139,10 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# BASEPATH = Path(__file__).resolve().parent.parent
+
+# STATIC_ROOT = BASEPATH.joinpath('static')
+# BASEPATH.joinpath('media')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
