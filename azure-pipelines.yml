@@ -49,6 +49,7 @@ steps:
   displayName: 'Run tests'
 
 - task: PublishTestResults@2
+  displayName: Build Docker image
   inputs:
     testResultsFiles: "**/TEST-*.xml"
     testRunTitle: 'Python $(PYTHON_VERSION)'
