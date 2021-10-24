@@ -54,3 +54,11 @@ steps:
     testResultsFiles: "**/TEST-*.xml"
     testRunTitle: 'Python $(PYTHON_VERSION)'
   condition: succeededOrFailed()
+  
+- task: Docker@2
+  displayName: Push Docker image
+  inputs:
+    containerRegistry: 'azure-docker'
+    repository: 'resume-springboot-image'
+    command: 'push'
+    tags: 'latest'
