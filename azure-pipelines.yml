@@ -59,6 +59,6 @@ steps:
   displayName: Push Docker image
   inputs:
     containerRegistry: 'azure-docker'
-    repository: 'resume-springboot-image'
+    repository: 'sharp_merkle-image'
     command: 'push'
     tags: 'latest'
